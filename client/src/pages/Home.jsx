@@ -53,7 +53,7 @@ function Home() {
                 ) : (
                   <RenderCards
                     data = {[]}
-                    title = "No pots found"
+                    title = "No post found"
                     />
                 )}
               </div>
