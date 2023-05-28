@@ -5,7 +5,7 @@ import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
 
-function createPost() {
+const createPost = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
