@@ -5,7 +5,7 @@ import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
 
-const createPost = () => {
+function createPost(){
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
@@ -16,15 +16,16 @@ const createPost = () => {
   const [generatingImg, setGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
 
-   const handleChange = (e) =>
+   function handleChange (e){
      setForm({ ...form, [e.target.name]: e.target.value });
-
-   const handleSurpriseMe = () => {
+   }
+    
+   function handleSurpriseMe (){
      const randomPrompt = getRandomPrompt(form.prompt);
      setForm({ ...form, prompt: randomPrompt });
    };
 
-   const generateImage = async () => {
+   async function generateImage(){
      if (form.prompt) {
        try {
          setGeneratingImg(true);
@@ -54,7 +55,7 @@ const createPost = () => {
    };
 
 
-   const handleSubmit = async (e) => {
+   async function handleSubmit (e){
      e.preventDefault();
 
      if (form.prompt && form.photo) {
