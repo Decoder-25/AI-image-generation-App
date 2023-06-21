@@ -26,4 +26,4 @@ function Card( _id, name, prompt, photo) {
   );
 }
 
-export default Card
+export default Card;
